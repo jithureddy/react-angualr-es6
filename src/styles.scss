@@ -1,0 +1,28 @@
+
+body {
+    padding-top: 80px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.done-true{
+  text-decoration: line-through;
+}
+.done-false{
+  text-decoration: "";
+}
+.angular-part{
+  background-color: lightskyblue
+}
+.react-part{
+  background-color: cornflowerblue
+}
+.list-item{
+  list-style: none;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 10px 20px 5px;
+  font-size: 20px;
+}
+.app-toolbar {
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.1);
+}

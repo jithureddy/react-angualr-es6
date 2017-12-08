@@ -1,0 +1,37 @@
+language: node_js
+node_js:
+- 6.9.5
+env:
+  - NODE_ENV=prod
+  - NODE_ENV=dev
+cache:
+  directories:
+    - node_modules
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+install:
+- npm install -g babel
+- npm install -g webpack
+- npm install -g webpack-dev-server
+- npm install -g eslint
+- npm install
+- sudo pip install -r requirements.txt
+before_script:
+- wget "http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip"
+- unzip chromedriver_linux64.zip
+- sudo mv chromedriver /usr/local/bin
+- "export DISPLAY=:99.0"
+- "sh -e /etc/init.d/xvfb start"
+- sleep 2
+script:
+- npm run lint:travis
+- npm run test
+- pybot test.robot
+notifications:
+  email:
+  - jithu.reddy225@gmail.com
