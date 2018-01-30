@@ -1,7 +1,7 @@
 {
   "name": "react-angular-es6",
   "version": "1.0.0",
-  "description": "Manacola company web",
+  "description": "Angular react web using es6, material concepts",
   "main": "app.js",
   "keywords": [
     "react",
@@ -91,5 +91,5 @@
     "test:debug": "karma start karma.conf.js --log-level=debug --single-run=False",
     "test:watch": "karma start karma.conf.js --auto-watch=true --single-run=False"
   },
-  "repository": "git@github.com:Manacola/react-angular-es6.git"
+  "repository": "git@github.com:jithureddy/react-angular-es6.git"
 }
